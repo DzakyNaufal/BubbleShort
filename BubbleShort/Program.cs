@@ -56,10 +56,39 @@ namespace BubbleShort
             Console.WriteLine("");
         }
 
+        public void BubbleSortArray()
+        {
+            for (int i = 1; i < n; i++) ;
+            {
+                // Pada pass i, bandingkan n - 1 element pertama dengann elemen selanjutnya
+                for (int j = 0; j < n - 1; j++) 
+                {
+                    if (a[j] > a[j]) // Jika elemen tidak dalam urutan yang benar
+                    {
+                        // Tukar elemen
+                        int temp;
+                        temp = a[j];
+                        a[j] = a[j + 1];
+                        a[j + 1] = temp;
+                    }
+                }
+            }
+        }
 
-        
+        static void main(string[] args)
+        {
+            // Creating the object of the BubbleSort class
+            Program myList = new Program();
 
-
-        
+            // Pemanggilan fungsi untuk menerima elemen array
+            myList.read();
+            // Pemanggilan fungsi untuk mengurutkan array
+            myList.BubbleSortArray();
+            // Pemanggilan fungsi untuk menampilkan array yang tersusun 
+            myList.display();
+            // Exit
+            Console.WriteLine("\n\nTekan Tombol Apa Saja Untuk Keluar.");
+            Console.Read();
+        }       
     }
 }
